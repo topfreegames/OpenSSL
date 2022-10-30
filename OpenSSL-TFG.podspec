@@ -30,8 +30,8 @@ Pod::Spec.new do |s|
   s.ios.header_dir          = 'openssl'
   s.ios.preserve_paths      = 'lib/libcrypto.a', 'lib/libssl.a'
   s.ios.vendored_libraries  = 'lib/libcrypto.a', 'lib/libssl.a'
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
   s.libraries = 'ssl', 'crypto'
   s.requires_arc = false
