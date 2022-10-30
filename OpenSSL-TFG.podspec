@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "OpenSSL-TFG"
-  s.version      = "1.1.1b"
+  s.version      = "1.1.1q"
   s.summary      = "OpenSSL for iOS and OS X"
   s.description  = "OpenSSL is an SSL/TLS and Crypto toolkit. Supports iOS including Simulator (armv7,armv7s,arm64,i386,x86_64)."
   s.homepage     = "https://github.com/tfgco/OpenSSL.git"
@@ -24,12 +24,14 @@ Pod::Spec.new do |s|
                      'Tim Hudson' => 'tjh@cryptsoft.com',
                      'Justin Plouffe' => 'plouffe.justin@gmail.com'}
   
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '11.0'
   s.ios.source_files        = 'include/openssl/**/*.h'
   s.ios.public_header_files = 'include/openssl/**/*.h'
   s.ios.header_dir          = 'openssl'
   s.ios.preserve_paths      = 'lib/libcrypto.a', 'lib/libssl.a'
   s.ios.vendored_libraries  = 'lib/libcrypto.a', 'lib/libssl.a'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'}
 
   s.libraries = 'ssl', 'crypto'
   s.requires_arc = false
