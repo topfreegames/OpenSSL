@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "OpenSSL-TFG"
-  s.version      = "1.1.1q"
+  s.version      = "1.1.1t"
   s.summary      = "OpenSSL for iOS and OS X"
   s.description  = "OpenSSL is an SSL/TLS and Crypto toolkit. Supports iOS including Simulator (armv7,armv7s,arm64,i386,x86_64)."
-  s.homepage     = "https://github.com/tfgco/OpenSSL.git"
+  s.homepage     = "https://github.com/topfreegames/OpenSSL.git"
   s.license	     = { :type => 'OpenSSL (OpenSSL/SSLeay)', :file => 'LICENSE' }
-  s.source       = { :git => "https://github.com/tfgco/OpenSSL.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/topfreegames/OpenSSL.git", :tag => "#{s.version}" }
 
   s.authors       =  {'Mark J. Cox' => 'mark@openssl.org',
                      'Ralf S. Engelschall' => 'rse@openssl.org',
@@ -25,10 +25,6 @@ Pod::Spec.new do |s|
                      'Justin Plouffe' => 'plouffe.justin@gmail.com'}
   
   s.ios.deployment_target = '11.0'
-  s.ios.source_files        = 'include/openssl/**/*.h'
-  s.ios.public_header_files = 'include/openssl/**/*.h'
-  s.ios.header_dir          = 'openssl'
   s.vendored_frameworks = 'OpenSSL.xcframework'
-  s.libraries = 'ssl', 'crypto'
   s.requires_arc = false
 end

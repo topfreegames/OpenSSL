@@ -1,1 +1,0 @@
-OpenSSL-TFG.podspec
