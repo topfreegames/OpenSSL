@@ -28,9 +28,7 @@ Pod::Spec.new do |s|
   s.ios.source_files        = 'include/openssl/**/*.h'
   s.ios.public_header_files = 'include/openssl/**/*.h'
   s.ios.header_dir          = 'openssl'
-  s.ios.preserve_paths      = 'lib/libcrypto.a', 'lib/libssl.a'
-  s.ios.vendored_libraries  = 'lib/libcrypto.a', 'lib/libssl.a'
-
+  s.vendored_frameworks = 'OpenSSL.xcframework'
   s.libraries = 'ssl', 'crypto'
   s.requires_arc = false
 end
