@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
                      'Justin Plouffe' => 'plouffe.justin@gmail.com'}
   
   s.ios.deployment_target = '11.0'
-  s.vendored_frameworks = 'OpenSSL.xcframework'
+  s.vendored_frameworks = ['crypto.xcframework', 'ssl.xcframework']
   s.requires_arc = false
 end
