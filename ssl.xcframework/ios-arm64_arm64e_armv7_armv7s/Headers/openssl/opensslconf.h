@@ -16,8 +16,6 @@
 # include <openssl/opensslconf_ios_arm64.h>
 #elif TARGET_OS_IOS && TARGET_OS_EMBEDDED && TARGET_CPU_ARM && !defined(__ARM_ARCH_7S__)
 # include <openssl/opensslconf_ios_armv7.h>
-#elif TARGET_OS_IOS && (TARGET_OS_EMBEDDED || TARGET_OS_SIMULATOR) && TARGET_CPU_ARM64
-# include <openssl/opensslconf_ios_arm64.h>
 #else
 # error Unable to determine target or target not included in OpenSSL build
 #endif
